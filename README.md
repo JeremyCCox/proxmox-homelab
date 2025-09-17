@@ -26,7 +26,7 @@ graph TD
     subgraph Headless["Headless Guests"]
         DockerHost["Ubuntu Docker Host (Services & Containers)"]
         IntelliJ["Remote IDE Service (Jetbrains Gateway, VS Code Server)"]
-        WRAP["WRAP Server (Private Client service)"]
+        WRAP["WRAP Server"]
     end
 
     %% Connections
