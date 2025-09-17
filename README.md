@@ -40,8 +40,6 @@ graph TD
 
 ## Infrastructure Roadmap
 
-## Infrastructure Roadmap Timeline
-
 ```mermaid
 timeline
     title Proxmox Server Stack Roadmap
