@@ -10,8 +10,8 @@ graph TD
 
     %% PCIe Passthrough Guests
     subgraph PCIe_Passthrough["PCIe Passthrough Guests"]
-        Win11["Windows 11 VM (2070 Super GPU)"]
-        Kubuntu["Kubuntu VM (2070 Super GPU)"]
+        Win11["Windows 11 VM"]
+        Kubuntu["Kubuntu VM"]
     end
 
 
