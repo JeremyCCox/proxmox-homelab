@@ -38,6 +38,34 @@ graph TD
     Proxmox --> Headless
 ```
 
+## Proxmox Storage Access Diagram
+
+```mermaid
+graph TD
+    %% PCIe Passthrough Guests
+    subgraph PCIe_Passthrough["PCIe Passthrough Guests"]
+        Win11["Windows 11 VM"]
+        Kubuntu["Kubuntu VM"]
+    end
+
+    %% Headless Guests
+    subgraph Headless["Headless Guests"]
+        DockerHost["Ubuntu Docker Host (Services & Containers)"]
+        DevVM["Remote Development VM"]
+        WRAP["WRAP Server"]
+    end
+
+    %% NAS
+    NAS["NAS Storage"]  
+
+    %% Connections
+    Win11 ---|"Full Read/Write"| NAS
+    Kubuntu ---|"Full Read/Write"| NAS
+
+    DockerHost ---|"Selected Shares / NFS/SMB"| NAS
+    DevVM ---|"Selected Shares / NFS/SMB"| NAS
+```
+
 ## Infrastructure Roadmap
 
 ```mermaid
